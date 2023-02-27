@@ -14,7 +14,7 @@ let organizationName = faker.company.name()
 
 describe("Add organization test", () => {
 
-    beforeEach("", () => {
+    beforeEach("Visit app and log in", () => {
         cy.visit("/");
         loginPage.login(credetials.email, credetials.password);
         cy.url().should("not.include", "/login");
